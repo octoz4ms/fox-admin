@@ -1,0 +1,5 @@
+/** 全局样式 */
+$--ele-font-path: '~ele-admin/es/style/fonts';
+@import '~ele-admin/es/style/themes/dynamic.scss';
+@import '~ele-admin/es/style/index.scss';
+@import './transition/index.scss';
