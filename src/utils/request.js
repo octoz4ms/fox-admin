@@ -20,7 +20,7 @@ service.interceptors.request.use(
     // 添加 token 到 header
     const token = getToken();
     if (token && config.headers) {
-      config.headers.common[TOKEN_HEADER_NAME] = token;
+      config.headers.common[TOKEN_HEADER_NAME] = 'Bearer ' + token;
     }
     return config;
   },

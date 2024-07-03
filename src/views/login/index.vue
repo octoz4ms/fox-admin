@@ -126,7 +126,8 @@
           username: 'admin',
           password: 'admin',
           remember: true,
-          code: ''
+          code: '',
+          uuid: ''
         },
         // 验证码base64数据
         captcha: '',
@@ -202,6 +203,7 @@
             this.text = data.text;
             // 自动回填验证码, 实际项目去掉这个
             this.form.code = this.text;
+            this.form.uuid = data.uuid;
             this.$refs?.form?.clearValidate();
           })
           .catch((e) => {

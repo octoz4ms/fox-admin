@@ -5,6 +5,7 @@ import request from '@/utils/request';
  */
 export async function getUserInfo() {
   const res = await request.get('/auth/user');
+  console.log('用户:', res);
   if (res.data.code === 0 && res.data.data) {
     return res.data.data;
   }

@@ -60,8 +60,10 @@ export default {
         USER_MENUS ??
           toTreeData({
             data: result.authorities?.filter((d) => d.menuType !== 1),
-            idField: 'menuId',
-            parentIdField: 'parentId'
+            idField: 'menuNo',
+            parentIdField: 'parentNo'
+            // idField: 'menuId',
+            // parentIdField: 'parentId'
           })
       );
       commit('setMenus', menus);
