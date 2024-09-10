@@ -80,7 +80,8 @@
       </div>
     </el-form>
     <div class="login-copyright">
-      copyright © 2022 eleadmin.com all rights reserved.
+      copyright © 2024 octopi.com all rights reserved
+      <a href="https://beian.miit.gov.cn"> 京ICP备2024074477号-1 </a>
     </div>
     <!-- 图形验证码弹窗 -->
     <ele-modal width="320px" title="发送验证码" :visible.sync="showImgCode">

@@ -84,7 +84,8 @@
       </div>
     </el-form>
     <div class="login-copyright">
-      copyright © 2022 eleadmin.com all rights reserved.
+      copyright © 2024 octopi.com all rights reserved
+      <a href="https://beian.miit.gov.cn">京ICP备2024074477号-1</a>
     </div>
     <!-- 多语言切换 -->
     <div style="position: absolute; right: 30px; top: 20px">
@@ -123,8 +124,8 @@
         loading: false,
         // 表单数据
         form: {
-          username: 'admin',
-          password: 'admin',
+          username: '',
+          password: '',
           remember: true,
           code: '',
           uuid: ''
@@ -202,8 +203,9 @@
             // 实际项目后端一般会返回验证码的key而不是直接返回验证码的内容, 登录用key去验证, 可以根据自己后端接口修改
             this.text = data.text;
             // 自动回填验证码, 实际项目去掉这个
-            this.form.code = this.text;
+            // this.form.code = this.text;
             this.form.uuid = data.uuid;
+            console.log(this.captcha);
             this.$refs?.form?.clearValidate();
           })
           .catch((e) => {

@@ -24,6 +24,7 @@
     </div>
     <div class="ele-text-secondary" style="margin-top: 8px">
       {{ $t('layout.footer.copyright') }}
+      <a href="https://beian.miit.gov.cn">京ICP备2024074477号-1</a>
     </div>
   </div>
 </template>

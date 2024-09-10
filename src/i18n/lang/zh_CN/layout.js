@@ -10,7 +10,7 @@ export default {
     website: '官网',
     document: '文档',
     authorization: '授权',
-    copyright: 'Copyright © 2022 武汉易云智科技有限公司'
+    copyright: 'Copyright © 2024 octopi.com'
   },
   logout: {
     title: '提示',
