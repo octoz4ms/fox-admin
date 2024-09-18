@@ -4,9 +4,10 @@ import request from '@/utils/request';
  * 上传文件
  * @param file 文件
  */
-export async function uploadFile(file) {
+export async function uploadFile(file, folder) {
   const formData = new FormData();
   formData.append('file', file);
+  formData.append('folder', folder);
   const res = await request.post('/file/upload', formData);
   if (res.data.code === 0) {
     return res.data.data;

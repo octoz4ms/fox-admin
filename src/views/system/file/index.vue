@@ -50,7 +50,7 @@
             type="primary"
             :underline="false"
             icon="el-icon-download"
-            :href="row.downloadUrl"
+            :href="row.url"
             target="_blank"
           >
             下载
@@ -135,7 +135,7 @@
             }
           },
           {
-            prop: 'createNickname',
+            prop: 'creatorName',
             label: '上传人',
             sortable: 'custom',
             showOverflowTooltip: true,
@@ -219,7 +219,7 @@
           return false;
         }
         const loading = this.$loading({ lock: true });
-        uploadFile(file)
+        uploadFile(file, 'file-management')
           .then(() => {
             loading.close();
             this.$message.success('上传成功');

@@ -41,6 +41,7 @@ export default {
      */
     async fetchUserInfo({ commit }) {
       const result = await getUserInfo().catch(() => {});
+      console.log('--');
       if (!result) {
         return {};
       }

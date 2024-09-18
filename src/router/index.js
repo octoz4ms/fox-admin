@@ -29,10 +29,12 @@ router.beforeEach((to, from, next) => {
   // 判断是否登录
   if (getToken()) {
     // 还未注册动态路由则先获取
+    console.log(!store.state.user.menus);
     if (!store.state.user.menus) {
       store
         .dispatch('user/fetchUserInfo')
         .then(({ menus, homePath }) => {
+          console.log('menus', menus);
           if (menus) {
             router.addRoute(getMenuRoutes(menus, homePath));
             next({ ...to, replace: true });
